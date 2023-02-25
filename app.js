@@ -1,4 +1,12 @@
 const boxContainer = document.querySelector(".box-container");
+const saluteTextContainer = document.querySelector(".salute-text-container");
+const saluteImgContainer = document.querySelector(".salute-img-container");
+const authorName = document.querySelector(".name");
+const jobTitleContainers = document.querySelectorAll(".job-container");
+const jobTitles = document.querySelectorAll(".job");
+const projectsTitle = document.querySelector(".projects-title");
+const phones = document.querySelectorAll(".phone");
+const laptop = document.querySelector(".laptop");
 
 for (let i = 0; i < 365; i++) {
   const list = [
@@ -21,3 +29,20 @@ for (let i = 0; i < 365; i++) {
   el.classList = list.includes(i) ? "box active" : "box";
   boxContainer.appendChild(el);
 }
+
+window.addEventListener("scroll", () => {
+  let offsetY = window.scrollY;
+  saluteTextContainer.style.transform = `translateY(${offsetY * 0.1}px)`;
+  saluteImgContainer.style.transform = `translate(${offsetY * 0.4}px, ${
+    offsetY * 0.7
+  }px)`;
+  authorName.style.transform = `translateX(${offsetY * 0.1}px)`;
+  jobTitleContainers[0].style.backgroundPositionY = `${offsetY * 0.5}px`;
+  jobTitleContainers[1].style.backgroundPositionY = `${-offsetY * 0.5}px`;
+  jobTitles[0].style.transform = `translateX(calc(200vh - ${offsetY}px))`;
+  jobTitles[1].style.transform = `translateX(calc(-300vh + ${offsetY}px))`;
+  projectsTitle.style.transform = `translateY(calc(400vh - ${offsetY}px))`;
+  phones[0].style.transform = `translateX(calc(500vh - ${offsetY}px))`;
+  laptop.style.transform = `translateX(calc(600vh - ${offsetY}px))`;
+  phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`;
+});
