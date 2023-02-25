@@ -97,6 +97,7 @@
   width: 300px;
   height: 600px;
   position: relative;
+  z-index: 10;
 }
 
 .screen {
@@ -174,6 +175,7 @@
   height: 379px;
   flex: 1;
   position: relative;
+  z-index: 10;
 }
 
 .laptop .screen {
@@ -202,6 +204,7 @@
 .github-title {
   font-size: 100px;
   color: #333;
+  padding: 0 2rem;
 }
 
 .github-chart {
@@ -243,7 +246,7 @@
   background-color: #063f24;
 }
 
-.githubSm {
+.github-sm {
   display: none;
 }
 
