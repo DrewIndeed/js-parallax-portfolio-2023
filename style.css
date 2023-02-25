@@ -97,7 +97,7 @@
   width: 300px;
   height: 600px;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .screen {
@@ -175,7 +175,7 @@
   height: 379px;
   flex: 1;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
 
 .laptop .screen {
