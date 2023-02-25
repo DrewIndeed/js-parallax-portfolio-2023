@@ -7,6 +7,7 @@
 
 .container {
   background-color: #111;
+  overflow: hidden;
 }
 
 .salute {
@@ -22,7 +23,6 @@
 
 .salute-img-container {
   flex: 1;
-  align-self: flex-end;
 }
 
 .salute-text {
@@ -83,9 +83,9 @@
 .project {
   display: flex;
   align-items: center;
-  gap: 100px;
   height: 100vh;
   overflow: hidden;
+  padding: 1rem 0;
 }
 
 .project:nth-child(2n) {
@@ -125,6 +125,7 @@
   flex-direction: column;
   gap: 50px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .detail .title {
@@ -240,4 +241,49 @@
 }
 .github-chart:hover .active:nth-child(2n) {
   background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    padding: 0 30px;
+    text-align: center;
+  }
+  .project {
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n) {
+    flex-direction: column;
+  }
+  .phone,
+  .laptop {
+    transform: scale(0.5) !important;
+  }
+
+  .detail {
+    gap: 20px;
+  }
+
+  .github-chart {
+    display: none;
+  }
+
+  .github-title {
+    text-align: center;
+    font-size: 10vw;
+  }
+
+  .github-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #555;
+    font-size: 30px;
+    text-align: center;
+  }
 }
